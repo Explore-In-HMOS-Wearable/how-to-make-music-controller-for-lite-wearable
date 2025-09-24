@@ -1,0 +1,4 @@
+<div class="container" onswipe="touchMove">
+    <text class="welcome">{{ $t("home.welcome") }}</text>
+    <text class="message">{{ $t("home.message") }}</text>
+</div>

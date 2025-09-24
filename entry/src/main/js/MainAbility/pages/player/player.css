@@ -1,0 +1,152 @@
+.container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #e06700;
+    flex-direction: column;
+}
+
+.track-image-wrapper {
+    display: flex;
+    width: 300px;
+    height: 90;
+    justify-content: center;
+}
+
+.track-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background-color: darkgray;
+    border-radius: 30px;
+    border-width: 1px;
+}
+
+.track-name {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    height: 18%;
+    font-size: 40fp;
+}
+
+.artist-name {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 8%;
+    font-size: 20fp;
+}
+
+.duration-progress {
+    width: 100%;
+    height: 8%;
+    color: #d88f3600;
+    display: flex;
+}
+
+.duration-time {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 5%;
+    font-size: 14fp;
+}
+
+.player-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 70%;
+}
+
+.track-control-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+
+.control-button {
+    width: 48px;
+    height: 48px;
+    margin-left: 16px;
+    animation-duration: 150ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.control-button-play-pause {
+    width: 65px;
+    height: 65px;
+    margin-left: 25%;
+    animation-duration: 150ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.music-image {
+    width: 65px;
+    height: 65px;
+}
+
+.back-button {
+    height: 12%;
+    width: 50%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-wrapper {
+    display: flex;
+    background-color: #60000000;
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.customMarquee {
+    width: 90%;
+    height: 45px;
+    padding: 2px;
+    font-size: 36fp;
+}
+
+@keyframes buttonPress {
+    from {
+        transform: translateX(0) translateY(0);
+    }
+    to {
+        transform: translateX(2px) translateY(2px);
+    }
+}
+
+@keyframes playButtonPress {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.control-button:active {
+    animation-name: buttonPress;
+}
+
+.control-button-play-pause:active {
+    animation-name: playButtonPress;
+}

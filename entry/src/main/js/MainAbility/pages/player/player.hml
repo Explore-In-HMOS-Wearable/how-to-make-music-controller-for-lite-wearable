@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="player-wrapper">
+        <div class="track-image-wrapper">
+            <div class="track-image">
+                <image src="../../common/assets/music.png"
+                       class="music-image"></image>
+            </div>
+        </div>
+        <marquee class="customMarquee" scrollamount="{{ scrollAmount }}">{{ trackName }}</marquee>
+        <text>{{ artistName }}</text>
+        <progress type="horizontal" percent="{{ durationPercent }}" border-color="red" class="duration-progress"
+                  onclick="changeHorizontal"></progress>
+        <text class="duration-time">{{ durationTime }}</text>
+        <div class="track-control-wrapper">
+            <image src="../../common/assets/backward_end_fill.png"
+                   class="control-button"
+                   onclick="handlePrev"></image>
+
+            <image src="../../common/assets/pause.png"
+                   class="control-button-play-pause"
+                   if="{{ isPlay }}"
+                   onclick="handlePlayStatus"></image>
+
+            <image src="../../common/assets/play.png"
+                   class="control-button-play-pause"
+                   else
+                   onclick="handlePlayStatus"></image>
+
+            <image src="../../common/assets/forward_end_fill.png"
+                   class="control-button"
+                   onclick="handleNext"></image>
+        </div>
+    </div>
+    <div class="nav-wrapper">
+        <image src="../../common/assets/undo.png" class="control-button" onclick="handleBack"></image>
+        <image if="{{ isShuffle }}" src="../../common/assets/shuffle.png" class="control-button"
+               onclick="handleShuffle"></image>
+        <image else src="../../common/assets/shuffle_red.png" class="control-button" onclick="handleShuffle"></image>
+        <image src="../../common/assets/list_bullet.png" class="control-button" onclick="handleSetting"></image>
+    </div>
+</div>

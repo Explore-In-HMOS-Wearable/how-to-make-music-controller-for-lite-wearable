@@ -1,0 +1,21 @@
+<div class="container">
+    <text if="{{ !playlist }}" class="error-message">Failed to receive data \nmake sure your \nmobile app is open.</text>
+    <text class="page-title">Playlist</text>
+    <list class="playlist-wrapper">
+        <list-item for="{{ playlist }}" class="playlist-item" on:swipe="controlMusic({{ $item }})"
+                   on:click="controlMusic({{ $item }})">
+            <div class="playlist-image">
+                <image src="../../common/assets/music.png"
+                       class="music-image"></image>
+            </div>
+            <text class="playlist-title">{{ $item.title }}</text>
+            <image if="{{ $item.isFav }}" src="../../common/assets/heart.png" class="playlist-fav"
+                   onclick="handleFav">
+            </image>
+            <image else src="../../common/assets/heart_fill.png" class="playlist-fav" onclick="handleFav"></image>
+        </list-item>
+    </list>
+    <div class="back-button nav-wrapper">
+        <image src="../../common/assets/undo.png" class="control-button" onclick="handleBack"></image>
+    </div>
+</div>
